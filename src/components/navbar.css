@@ -1,0 +1,90 @@
+/* Simple navbar styles */
+:root {
+	--nav-bg: #ffffff;
+	--nav-text: #1f2937; /* gray-800 */
+	--nav-accent: #2563eb; /* blue-600 */
+	--nav-shadow: rgba(37, 99, 235, 0.06);
+}
+
+.navbar {
+	background: var(--nav-bg);
+	color: var(--nav-text);
+	display: flex;
+	justify-content: center; /* center nav wrapper horizontally */
+	align-items: center;
+	height: 64px;
+	padding: 0 16px;
+	box-shadow: 0 1px 6px var(--nav-shadow);
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.nav-inner {
+	width: 100%;
+	max-width: 1100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* brand left, links right */
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.brand img {
+	height: 36px; /* keep the logo small */
+	width: auto;
+	display: block;
+}
+
+.brand span {
+	font-weight: 700;
+	color: var(--nav-text);
+	font-size: 1rem;
+}
+
+.navbar .links {
+	display: flex;
+	gap: 16px; /* space between links */
+	align-items: center;
+}
+
+.navbar .links a {
+	color: var(--nav-text);
+	text-decoration: none;
+	font-weight: 500;
+	padding: 8px 12px;
+	border-radius: 6px;
+	transition: background-color 150ms ease, color 150ms ease, transform 60ms ease;
+}
+
+.navbar .links a:hover {
+	background-color: rgba(0, 0, 0, 0.04);
+}
+
+.navbar .links a[aria-current="page"],
+.navbar .links a.active {
+	color: var(--nav-accent);
+	background-color: rgba(37, 99, 235, 0.08);
+}
+
+/* small screen adjustments */
+@media (max-width: 600px) {
+	.navbar {
+		height: 56px;
+		padding: 0 12px;
+	}
+
+	.navbar .links {
+		gap: 10px;
+	}
+
+	.navbar .links a {
+		padding: 6px 8px;
+		font-size: 14px;
+	}
+}
+
