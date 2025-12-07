@@ -1,4 +1,9 @@
-/* Simple navbar styles */
+/* Navbar fixed to top */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 :root {
 	--nav-bg: #ffffff;
 	--nav-text: #1f2937; /* gray-800 */
